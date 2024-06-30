@@ -159,7 +159,6 @@ footer .social-media a:hover {
     color: #ddd;
 }
 
-/* Blog and Subscribe Section Styles */
 .blog article {
     margin: 20px 0;
     padding: 10px;
@@ -180,7 +179,7 @@ footer .social-media a:hover {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-height: 3em; /* height of 2 lines */
+    max-height: 3em;
     transition: max-height 0.3s ease;
 }
 
@@ -241,7 +240,6 @@ footer .social-media a:hover {
     background-color: #45a049;
 }
 
-/* Contact Form Styles */
 .contact form {
     display: flex;
     flex-direction: column;
@@ -270,7 +268,6 @@ footer .social-media a:hover {
     background-color: #45a049;
 }
 
-/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     nav ul li {
         display: block;
