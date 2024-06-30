@@ -159,6 +159,7 @@ footer .social-media a:hover {
     color: #ddd;
 }
 
+/* Blog and Subscribe Section Styles */
 .blog article {
     margin: 20px 0;
     padding: 10px;
@@ -166,10 +167,40 @@ footer .social-media a:hover {
     border-radius: 5px;
     background-color: #f9f9f9;
     text-align: left;
+    position: relative;
 }
 
 .blog article h2 {
     color: #4CAF50;
+}
+
+.blog article .post-content {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3em; /* height of 2 lines */
+    transition: max-height 0.3s ease;
+}
+
+.blog article .post-content.expanded {
+    -webkit-line-clamp: none;
+    max-height: none;
+}
+
+.blog article button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.blog article button:hover {
+    background-color: #45a049;
 }
 
 .subscribe {
@@ -210,6 +241,7 @@ footer .social-media a:hover {
     background-color: #45a049;
 }
 
+/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     nav ul li {
         display: block;
