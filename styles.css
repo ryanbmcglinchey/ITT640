@@ -81,11 +81,11 @@ main {
     background-color: #e7e7e7;
 }
 
-.features, .testimonials, .blog, .subscribe {
+.features, .testimonials, .blog, .subscribe, .contact {
     margin: 20px 0;
 }
 
-.features h2, .testimonials h2, .subscribe h2 {
+.features h2, .testimonials h2, .subscribe h2, .contact h1 {
     color: #4CAF50;
 }
 
@@ -241,6 +241,35 @@ footer .social-media a:hover {
     background-color: #45a049;
 }
 
+/* Contact Form Styles */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #45a049;
+}
+
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     nav ul li {
@@ -260,7 +289,7 @@ footer .social-media a:hover {
         font-size: 1em;
     }
 
-    .features, .testimonials, .blog, .subscribe {
+    .features, .testimonials, .blog, .subscribe, .contact {
         margin: 10px 0;
     }
 
@@ -281,11 +310,11 @@ footer .social-media a:hover {
         margin: 10px 0;
     }
 
-    .subscribe form {
+    .subscribe form, .contact form {
         width: 100%;
     }
 
-    .subscribe input, .subscribe button {
+    .subscribe input, .subscribe button, .contact input, .contact textarea, .contact button {
         width: 100%;
         max-width: none;
     }
