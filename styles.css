@@ -117,6 +117,24 @@ main {
     background-color: #f9f9f9;
 }
 
+.products {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.products h1 {
+    color: #4CAF50;
+}
+
+.product {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
 footer {
     background-color: #333;
     color: #fff;
@@ -147,4 +165,44 @@ footer .social-media a {
 
 footer .social-media a:hover {
     color: #ddd;
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .features, .testimonials {
+        margin: 10px 0;
+    }
+
+    .features ul li {
+        padding-left: 10px;
+    }
+
+    .features ul li::before {
+        width: 0.5em;
+        margin-left: -0.5em;
+    }
+
+    .products {
+        padding: 10px;
+    }
+
+    .product {
+        margin: 10px 0;
+    }
 }
