@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VR Startup - Blog</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
+     <script>
         function toggleReadMore(button) {
             const post = button.previousElementSibling;
             if (post.classList.contains('expanded')) {
@@ -16,6 +16,17 @@
                 button.textContent = 'Read Less';
             }
         }
+
+        function loadPosts() {
+            const blogSection = document.getElementById('blog');
+            const existingPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+
+            existingPosts.forEach(post => {
+                blogSection.innerHTML += post;
+            });
+        }
+
+        window.onload = loadPosts;
     </script>
 </head>
 <body>
