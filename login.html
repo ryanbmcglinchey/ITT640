@@ -5,15 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VR Startup - Login</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function login() {
+            // Simple example of setting a logged-in status
+            localStorage.setItem('loggedIn', 'true');
+            window.location.href = 'members.html';
+        }
+    </script>
 </head>
 <body>
     <header>
         <div class="logo">VR Startup Logo</div>
+	<nav>
+    		<ul>
+        		<li><a href="index.html">Home</a></li>
+        		<li><a href="about.html">About</a></li>
+        		<li><a href="products.html">Products</a></li>
+        		<li><a href="blog.html">Blog</a></li>
+        		<li><a href="contact.html">Contact</a></li>
+        		<li><a href="login.html">Login/Sign Up</a></li>
+        		<li><a href="members.html">Members</a></li>
+    		</ul>
+	</nav>
     </header>
     <main>
         <section class="login">
             <h1>Login to Your Account</h1>
-            <form>
+            <form onsubmit="login(); return false;">
                 <input type="email" placeholder="Email" required>
                 <input type="password" placeholder="Password" required>
                 <button type="submit">Login</button>
@@ -21,18 +39,6 @@
             </form>
             <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
         </section>
-        <section class="signup">
-            <h1>Create Your Account</h1>
-            <form>
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm Password" required>
-                <button type="submit">Sign Up</button>
-            </form>
-            <p>Already have an account? <a href="login.html">Login</a></p>
-        </section>
-
     </main>
 </body>
 </html>

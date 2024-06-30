@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Startup - Members Only</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function checkLogin() {
+            if (localStorage.getItem('loggedIn') !== 'true') {
+                window.location.href = 'login.html';
+            }
+        }
+        window.onload = checkLogin;
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">VR Startup Logo</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login/Sign Up</a></li>
+                <li><a href="members.html">Members</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="members">
+            <h1>Welcome, Member!</h1>
+            <p>This is exclusive content only available to logged-in members.</p>
+            <a href="#" onclick="logout()">Logout</a>
+        </section>
+    </main>
+    <script>
+        function logout() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
