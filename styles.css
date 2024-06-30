@@ -18,6 +18,11 @@ header .logo {
     font-weight: bold;
 }
 
+header .logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -82,6 +87,34 @@ main {
 
 .features h2, .testimonials h2 {
     color: #4CAF50;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features ul li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.features ul li::before {
+    content: "\2022";
+    color: #4CAF50;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.testimonials .testimonial {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
 }
 
 footer {
