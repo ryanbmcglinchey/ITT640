@@ -19,11 +19,14 @@
                     <button onclick="toggleReadMore(this)">Read More</button>
                 </article>
             `;
-
-            const blogSection = document.getElementById('blog');
-            blogSection.innerHTML += newPost;
+            const existingPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+            existingPosts.push(newPost);
+            localStorage.setItem('blogPosts', JSON.stringify(existingPosts));
 
             document.getElementById('contact-form').reset();
+
+            document.getElementById('thank-you-message').style.display = 'block';
+            document.getElementById('contact-form').style.display = 'none';
         }
     </script>
 </head>
@@ -44,9 +47,14 @@
     </header>
     <main>
 		<section class="contact">
-            <h1>Leave Us a Message!</h1>
+            <h1>Contact Us</h1>
             <div class="contact">
-               <p>Phone: 1800.555.5555 Email: test@test.com</p>
+                <h2>Phone</h2>
+                <p>1800-555-5555</p>
+            </div>
+            <div class="contact">
+                <h2>Email</h2>
+                <p> email@email.com </p>
             </div>
         </section>
         <section class="contact">
@@ -57,6 +65,10 @@
                 <textarea id="question" placeholder="Your Question" required></textarea>
                 <button type="submit">Submit</button>
             </form>
+            <div id="thank-you-message" style="display: none;">
+                <h2>Thank You!</h2>
+                <p>Your question has been submitted and will appear in the blog section.</p>
+            </div>
         </section>
     </main>
     <footer>
